@@ -1,0 +1,38 @@
+section { padding: 72px 0; border-bottom: 1px solid var(--line); }
+.eyebrow {
+  font-family: var(--font-mono);
+  color: var(--cyan);
+  font-size: 13px;
+  margin-bottom: 8px;
+  &::before { content: '// '; color: var(--muted); }
+}
+.section-head h2 { font-size: clamp(26px, 4vw, 34px); }
+.sub { color: var(--muted); margin-top: 10px; max-width: 600px; font-size: 15px; }
+.section-head { margin-bottom: 36px; }
+
+.list { display: flex; flex-direction: column; gap: 14px; }
+.item {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 20px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 22px 24px;
+}
+@media (max-width: 680px) { .item { grid-template-columns: 1fr; } }
+.level { height: fit-content; }
+.pill {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid var(--line);
+}
+.pill.shipped { color: var(--green); }
+.pill.in-progress { color: var(--amber); }
+.pill.next { color: var(--orange); }
+.item h3 { font-size: 16.5px; margin-bottom: 6px; }
+.item p { color: var(--muted); font-size: 14px; margin: 0 0 10px; }
+.tools { font-family: var(--font-mono); font-size: 12px; color: var(--cyan); }
