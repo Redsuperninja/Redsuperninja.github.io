@@ -1,0 +1,24 @@
+<article class="card" [class.compact]="compact">
+  <div class="top">
+    <div>
+      <h3>{{ project.name }}</h3>
+      <div class="meta">{{ project.subtitle }} · {{ project.dates }}</div>
+    </div>
+  </div>
+
+  <p class="summary">{{ project.summary }}</p>
+
+  <ul class="bullets" *ngIf="!compact">
+    <li *ngFor="let b of project.bullets">{{ b }}</li>
+  </ul>
+
+  <div class="badges">
+    <span class="badge" *ngFor="let tag of project.tags">{{ tag }}</span>
+  </div>
+
+  <div class="links" *ngIf="project.links?.length">
+    <a class="btn" *ngFor="let link of project.links" [href]="link.url" target="_blank" rel="noopener">
+      {{ link.label }} →
+    </a>
+  </div>
+</article>

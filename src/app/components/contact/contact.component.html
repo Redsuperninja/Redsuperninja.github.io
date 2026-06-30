@@ -1,0 +1,32 @@
+<footer id="contact">
+  <div class="wrap grid">
+    <div>
+      <h2>Let's talk</h2>
+      <p>Open to internships and entry-level developer or DevOps roles. Happy to walk through any of the projects above.</p>
+      <div class="links">
+        <a [href]="'mailto:' + data.profile.email">{{ data.profile.email }}</a>
+        <a [href]="data.profile.github" target="_blank" rel="noopener">github.com/Redsuperninja</a>
+        <a [href]="data.profile.linkedin" target="_blank" rel="noopener">linkedin.com/in/tawhid-ather</a>
+        <span class="muted">{{ data.profile.location }}</span>
+      </div>
+    </div>
+
+    <form (ngSubmit)="onSubmit()" *ngIf="!submitted">
+      <div>
+        <label for="name">Name</label>
+        <input id="name" type="text" name="name" [(ngModel)]="name" required />
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input id="email" type="email" name="email" [(ngModel)]="email" required />
+      </div>
+      <div>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" [(ngModel)]="message" required></textarea>
+      </div>
+      <button class="submit" type="submit">Send message</button>
+    </form>
+
+    <p class="sent" *ngIf="submitted">Thanks — wire this form up to an email service to actually receive it.</p>
+  </div>
+</footer>

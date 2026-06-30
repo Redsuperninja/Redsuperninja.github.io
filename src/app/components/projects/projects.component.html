@@ -1,0 +1,18 @@
+<section id="projects">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">portfolio</div>
+      <h2>Projects</h2>
+      <p class="sub">From an AI agent pipeline for a Fortune-500 component library to game jams and applied ML — built solo and in teams.</p>
+    </div>
+
+    <div class="featured-list">
+      <app-project-card *ngFor="let p of featured" [project]="p"></app-project-card>
+    </div>
+
+    <h3 class="more-head">More projects</h3>
+    <div class="more-grid">
+      <app-project-card *ngFor="let p of more" [project]="p" [compact]="true"></app-project-card>
+    </div>
+  </div>
+</section>

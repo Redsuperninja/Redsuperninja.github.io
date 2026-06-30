@@ -1,0 +1,22 @@
+<section id="devops">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">infrastructure</div>
+      <h2>DevOps &amp; infrastructure</h2>
+      <p class="sub">CI/CD and Linux automation are part of my day-to-day at LASP. Here's what's shipped, what I'm extending, and what's next.</p>
+    </div>
+
+    <div class="list">
+      <div class="item" *ngFor="let d of data.devops">
+        <div class="level">
+          <span class="pill" [class]="d.level">{{ levelLabel(d.level) }}</span>
+        </div>
+        <div>
+          <h3>{{ d.title }}</h3>
+          <p>{{ d.description }}</p>
+          <div class="tools">{{ d.tools }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

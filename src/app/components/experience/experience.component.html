@@ -1,0 +1,24 @@
+<section id="experience">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">currently</div>
+      <h2>Experience</h2>
+    </div>
+
+    <div class="entry" *ngFor="let job of data.experience">
+      <div class="entry-top">
+        <div>
+          <h3>{{ job.title }}</h3>
+          <div class="org">{{ job.org }}</div>
+        </div>
+        <div class="meta">
+          <div>{{ job.dates }}</div>
+          <div class="muted">{{ job.location }}</div>
+        </div>
+      </div>
+      <ul class="bullets">
+        <li *ngFor="let b of job.bullets">{{ b }}</li>
+      </ul>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,24 @@
+<section id="demos">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">watch</div>
+      <h2>Project demos</h2>
+      <p class="sub">Short walkthroughs of select projects in action — the result, not the source. Reach out if you'd like to see the code directly.</p>
+    </div>
+
+    <div class="grid">
+      <div class="card" *ngFor="let v of data.videos">
+        <div class="frame">
+          <!-- Replace with: <iframe src="https://www.youtube.com/embed/VIDEO_ID" allowfullscreen></iframe> -->
+          <iframe src="https://www.youtube.com/embed/VIDEO_ID" allowfullscreen></iframe>
+        </div>
+        <div class="info">
+          <h3>{{ v.title }}</h3>
+          <p>{{ v.description }}</p>
+        </div>
+      </div>
+    </div>
+
+    <p class="note">No source links live in this section by design — it's for showing results, not code.</p>
+  </div>
+</section>

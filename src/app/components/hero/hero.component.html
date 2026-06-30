@@ -1,0 +1,33 @@
+<header class="hero" id="top">
+  <div class="wrap grid">
+    <div>
+      <div class="eyebrow">CU Boulder · CS + Biomedical Engineering minor</div>
+      <h1>{{ data.profile.name }}</h1>
+      <p class="role">{{ data.profile.role }}</p>
+      <p class="tagline">{{ data.profile.tagline }}</p>
+      <div class="tags">
+        <span class="tag">Angular</span>
+        <span class="tag">Python</span>
+        <span class="tag">CI/CD</span>
+        <span class="tag">Docker</span>
+        <span class="tag">LangChain</span>
+      </div>
+    </div>
+
+    <div class="terminal">
+      <div class="terminal-bar">
+        <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+        <span class="title">whoami.sh</span>
+      </div>
+      <div class="terminal-body">
+        <div class="line"><span class="prompt">$</span> whoami</div>
+        <div class="line out"><strong>{{ data.profile.name }}</strong> — {{ data.profile.role }}</div>
+        <!-- <div class="line"><span class="prompt">$</span> cat current_role.txt</div>
+        <div class="line out">Software Dev Intern &#64; LASP, CU Boulder</div>
+        <div class="line"><span class="prompt">$</span> cat building_now.txt</div>
+        <div class="line out">Festo agentic frontend generator (capstone)</div> -->
+        <div class="line"><span class="prompt">$</span> <span class="cursor"></span></div>
+      </div>
+    </div>
+  </div>
+</header>
