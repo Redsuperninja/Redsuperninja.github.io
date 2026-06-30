@@ -9,8 +9,21 @@
     <div class="grid">
       <div class="card" *ngFor="let v of data.videos">
         <div class="frame">
-          <!-- Replace with: <iframe src="https://www.youtube.com/embed/VIDEO_ID" allowfullscreen></iframe> -->
-          <iframe src="https://www.youtube.com/embed/VIDEO_ID" allowfullscreen></iframe>
+          <iframe
+            *ngIf="embedUrl(v); else placeholder"
+            [src]="embedUrl(v)"
+            title="{{ v.title }}"
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+          <ng-template #placeholder>
+            <div class="placeholder">
+              <div class="ring"></div>
+              {{ v.embedNote }}
+            </div>
+          </ng-template>
         </div>
         <div class="info">
           <h3>{{ v.title }}</h3>

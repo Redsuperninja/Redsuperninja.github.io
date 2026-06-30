@@ -46,6 +46,7 @@ export interface VideoDemo {
   title: string;
   description: string;
   embedNote: string;
+  youtubeId?: string;
 }
 
 @Injectable({ providedIn: 'root' })
@@ -253,9 +254,9 @@ export class PortfolioDataService {
   ];
 
   readonly videos: VideoDemo[] = [
-    { title: 'Festo Frontend Generator demo', description: 'Agent generating a Festo-compliant page with human-in-the-loop approval.', embedNote: 'https://youtu.be/El85MxHt_P4' },
-  //   { title: 'SpotU walkthrough', description: 'Spotify-powered recommendations and playlist management in action.', embedNote: 'Swap with unlisted YouTube/Loom embed' },
-  //   { title: 'Dungeon Crawler gameplay', description: 'Combat, procedural levels, and enemy AI in a short run.', embedNote: 'Swap with unlisted YouTube/Loom embed' },
-  //   { title: 'Caution: Slick Floors gameplay', description: 'Momentum-based platforming with the friction-changing mop.', embedNote: 'Swap with unlisted YouTube/Loom embed' }
+    { title: 'Festo Frontend Generator demo', description: 'Agent generating a Festo-compliant page with human-in-the-loop approval.', embedNote: 'https://youtu.be/El85MxHt_P4', youtubeId: 'El85MxHt_P4' },
+  //   { title: 'SpotU walkthrough', description: 'Spotify-powered recommendations and playlist management in action.', embedNote: 'Swap with unlisted YouTube/Loom embed', youtubeId: 'YOUR_YOUTUBE_ID' },
+  //   { title: 'Dungeon Crawler gameplay', description: 'Combat, procedural levels, and enemy AI in a short run.', embedNote: 'Swap with unlisted YouTube/Loom embed', youtubeId: 'YOUR_YOUTUBE_ID' },
+  //   { title: 'Caution: Slick Floors gameplay', description: 'Momentum-based platforming with the friction-changing mop.', embedNote: 'Swap with unlisted YouTube/Loom embed', youtubeId: 'YOUR_YOUTUBE_ID' }
   ];
 }
