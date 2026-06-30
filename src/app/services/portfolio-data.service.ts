@@ -63,6 +63,7 @@ export class PortfolioDataService {
   };
 
   readonly experience: ExperienceEntry[] = [
+    
     {
       title: 'Software Developer Intern',
       org: 'Laboratory for Atmospheric and Space Physics (LASP), CU Boulder',
@@ -89,6 +90,22 @@ export class PortfolioDataService {
   ];
 
   readonly projects: Project[] = [
+    {
+      id: 'inky-illustrations',
+      name: 'Ava Mitchell — Artist Portfolio',
+      subtitle: 'Client project · Live in production',
+      dates: '2026 — Present',
+      featured: true,
+      summary:
+        'A responsive Angular 19 portfolio site for visual artist Ava Mitchell, showcasing contemporary ink art, sumi-e inspired work, and watercolor exploration — built, deployed, and actively maintained for a paying client.',
+      bullets: [
+        'Built a client-side rendered Angular 19 app with a component/page/service architecture for maintainable, reusable layout and page modules.',
+        'Shipped to production at inkyillustrations.com and continue to maintain and support it as the live site of record for the artist\u2019s work.',
+        'Currently scoping and building a shop and payment platform to extend the site from a portfolio into an e-commerce storefront.'
+      ],
+      tags: ['Angular 19', 'TypeScript', 'Client Project', 'Live Production'],
+      links: [{ label: 'Live Site', url: 'https://inkyillustrations.com/' }]
+    },
     {
       id: 'festo',
       name: 'Festo Agentic Frontend Generator',
