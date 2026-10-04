@@ -8,6 +8,7 @@ export interface Profile {
   linkedin: string;
   github: string;
   location: string;
+  resumeUrl: string;
 }
 
 export interface ExperienceEntry {
@@ -53,17 +54,17 @@ export interface VideoDemo {
 export class PortfolioDataService {
   readonly profile: Profile = {
     name: 'Tawhid Ather',
-    role: 'Software Developer',
+    role: 'Software Engineer',
     tagline:
-      'CS enthusiast building CI/CD tooling and full-stack apps, with project work spanning agentic AI pipelines, game development, and applied machine learning.',
+      'CU Boulder CS graduate (May 2026) building backend services, CI/CD automation, and data pipelines, with project work spanning agentic AI, local-first apps, optimization, and game development.',
     email: 'tawhid.ather@gmail.com',
     linkedin: 'https://linkedin.com/in/tawhid-ather',
     github: 'https://github.com/Redsuperninja',
-    location: 'Highlands Ranch, CO'
+    location: 'Boulder, CO',
+    resumeUrl: 'Tawhid_Ather_Resume.pdf'
   };
 
   readonly experience: ExperienceEntry[] = [
-    
     {
       title: 'Software Developer Intern',
       org: 'Laboratory for Atmospheric and Space Physics (LASP), CU Boulder',
@@ -77,19 +78,78 @@ export class PortfolioDataService {
         'Integrated OAuth 2.0 with role-based access control for multi-tier permissions on sensitive scientific data.',
         'Worked in Agile sprints — Git/Bitbucket version control, Jira tracking, daily stand-ups, and code reviews.'
       ]
+    },
+    {
+      title: 'Senior Resident Advisor',
+      org: 'University of Colorado Boulder',
+      location: 'Boulder, CO',
+      dates: 'Aug 2023 — May 2026',
+      bullets: [
+        'Supervised and mentored a team of 18 Resident Advisors across two residence halls serving 600+ students.',
+        'Handled confidential student records under FERPA, following data privacy and security practices.',
+        'Led staff meetings and training, and coordinated scheduling to ensure 24/7 coverage.'
+      ]
     }
   ];
 
   readonly skills: SkillGroup[] = [
-    { label: 'Languages', items: ['Python', 'Java', 'JavaScript', 'TypeScript', 'C++', 'SQL', 'Bash', 'MATLAB'] },
-    { label: 'CI/CD & DevOps', items: ['Docker', 'Ansible', 'Git', 'Bitbucket', 'Jira', 'CI/CD', 'Infrastructure as Code'] },
-    { label: 'Web & APIs', items: ['Angular', 'React', 'Node.js', 'Express', 'Flask', 'REST APIs', 'OAuth 2.0'] },
-    { label: 'AI & Cloud', items: ['AWS Bedrock', 'LangChain', 'LLMs', 'Human-in-the-Loop Systems'] },
-    { label: 'Data & Databases', items: ['PostgreSQL', 'MySQL', 'Pandas', 'scikit-learn', 'NumPy'] },
-    { label: 'Practices', items: ['Agile/Scrum', 'TDD', 'JUnit/Mocha', 'SOLID', 'OOD'] }
+    { label: 'Languages', items: ['Python', 'TypeScript', 'JavaScript', 'Java', 'C#', 'SQL', 'Bash', 'C++'] },
+    { label: 'CI/CD & DevOps', items: ['Docker', 'Docker Compose', 'GitHub Actions', 'Ansible', 'Linux', 'Git', 'Infrastructure as Code'] },
+    { label: 'Backend & Web', items: ['FastAPI', 'Flask', 'ASP.NET Core', 'Node.js', 'Express', 'Angular', 'React', 'React Native (Expo)', 'OAuth 2.0'] },
+    { label: 'Data & Databases', items: ['PostgreSQL', 'Snowflake', 'SQLite', 'MySQL', 'SQLAlchemy', 'Alembic', 'EF Core', 'ETL'] },
+    { label: 'AI & Optimization', items: ['AWS Bedrock', 'LangChain', 'LLM agents', 'Google OR-Tools (CP-SAT)', 'scikit-learn', 'Pandas'] },
+    { label: 'Practices', items: ['Agile/Scrum', 'TDD', 'pytest', 'JUnit/Mocha', 'Encryption at rest', 'RBAC', 'SOLID'] }
   ];
 
   readonly projects: Project[] = [
+    {
+      id: 'budget-buddy',
+      name: 'Budget Buddy — Local-First Budgeting & Tax-Prep App',
+      subtitle: 'Solo project · FastAPI + Expo',
+      dates: '2026 — Present',
+      featured: true,
+      summary:
+        'A private, local-first finance app: a Python FastAPI + SQLite \u201cHome Base\u201d running on the user\u2019s own computer and an Expo (React Native) phone app for iPhone and Android that syncs over home Wi-Fi.',
+      bullets: [
+        'Designed the database layer with SQLAlchemy models, Alembic migrations, and integer-cents money helpers to avoid floating-point errors.',
+        'Implemented encryption at rest with an OS-keyring master key, encrypted columns, encrypted file storage, and a recovery phrase.',
+        'Built accounts and transactions APIs, tax-year reference data (2025, 2026), a versioned sync API contract, and a mobile budget dashboard.',
+        'Maintain 185+ pytest tests with separate server and mobile CI pipelines in GitHub Actions.',
+        'Run development as a roadmap of small pull requests led by specialized AI agents (architect, backend, security, test, mobile, release), with architecture decision records.'
+      ],
+      tags: ['Python', 'FastAPI', 'SQLite', 'SQLAlchemy', 'Expo', 'GitHub Actions', 'Encryption']
+    },
+    {
+      id: 'ner-tenets',
+      name: 'NER Tenets — Net Effective Rent ETL Pipeline',
+      subtitle: 'Solo project · Data engineering',
+      dates: '2026',
+      featured: true,
+      summary:
+        'An ETL pipeline that pulls HUD Fair Market Rent and Census ACS median rent data via their APIs and computes Net Effective Rent for Colorado counties.',
+      bullets: [
+        'Modeled raw, staging, and analytics schemas, with an analytics view calculating concession dollars from free-rent months and tenant improvement allowances.',
+        'Ran the same pipeline against two targets: a throwaway local PostgreSQL sandbox for fast SQL iteration, and Snowflake with programmatic access token auth.',
+        'Containerized with Docker and Docker Compose, with shell scripts for end-to-end runs and ad hoc queries.'
+      ],
+      tags: ['Python', 'Snowflake', 'PostgreSQL', 'ETL', 'Docker'],
+      links: [{ label: 'View on GitHub', url: 'https://github.com/Redsuperninja/NER-Tenets' }]
+    },
+    {
+      id: 'stolen-palor',
+      name: 'Stolen Palor — Action Roguelike',
+      subtitle: 'In progress · Godot 4 .NET / C#',
+      dates: '2026 — Present',
+      featured: true,
+      summary:
+        'An action roguelike where players raid realms and steal pets that act as their weapons.',
+      bullets: [
+        'Built player, combat, enemy AI, pet, projectile, run, and UI systems with tunable values in data-driven .tres resource files.',
+        'Wrote a headless test runner with 75+ test cases, run through a build-and-test script.',
+        'Maintain design and engineering docs (pillars, decisions log, roadmap, glossary) with anti-drift rules keeping docs and code in sync.'
+      ],
+      tags: ['Godot 4', 'C#', '.NET', 'Game Dev', 'Testing']
+    },
     {
       id: 'inky-illustrations',
       name: 'Ava Mitchell — Artist Portfolio',
@@ -146,7 +206,7 @@ export class PortfolioDataService {
       name: '2D Dungeon Crawler',
       subtitle: 'Solo project · Java',
       dates: 'Aug 2024 — Dec 2024',
-      featured: true,
+      featured: false,
       summary:
         'An object-oriented dungeon crawler built to put Factory, Singleton, Observer, and State patterns into practice on real game architecture.',
       bullets: [
@@ -161,7 +221,7 @@ export class PortfolioDataService {
       name: 'Caution: Slick Floors',
       subtitle: 'Big Mode Game Jam 2026 · Unity / C#',
       dates: 'January 2026',
-      featured: true,
+      featured: false,
       summary:
         'A momentum-based 2D physics platformer where a mop dynamically alters surface friction — shipped among 647 jam entries, ranking #214 in Theme.',
       bullets: [
@@ -170,6 +230,30 @@ export class PortfolioDataService {
       ],
       tags: ['Unity', 'C#', 'Game Jam', 'Physics'],
       links: [{ label: 'Play the game', url: 'https://brentweiffenbach.itch.io/caution-slick-floors' }]
+    },
+    {
+      id: 'ballxpit-solver',
+      name: 'BallXPit Packing Solver',
+      subtitle: 'Constraint optimization',
+      dates: '2026',
+      featured: false,
+      summary: 'A Google OR-Tools CP-SAT solver that packs 28 polyomino-shaped buildings into two 7x7 zones while maximizing fill density.',
+      bullets: [
+        'Encoded a reachability constraint guaranteeing a walkable corridor from the board edge to a pinned target building.',
+        'Built a CLI with configurable time limits, multiple distinct layouts, and colorized terminal rendering.'
+      ],
+      tags: ['Python', 'OR-Tools', 'CP-SAT', 'CLI']
+    },
+    {
+      id: 'crm-api',
+      name: 'CRM & Payroll API',
+      subtitle: 'Backend · .NET 10',
+      dates: '2026',
+      featured: false,
+      summary: 'An ASP.NET Core web API with contact and payroll controllers, a repository layer, and Entity Framework Core migrations on PostgreSQL.',
+      bullets: [],
+      tags: ['C#', 'ASP.NET Core', 'EF Core', 'PostgreSQL'],
+      links: [{ label: 'View on GitHub', url: 'https://github.com/Redsuperninja/Crm' }]
     },
     {
       id: 'housing-model',
@@ -249,6 +333,20 @@ export class PortfolioDataService {
       description:
         'Implemented Docker container health checks, logging, and automated restart policies on the Festo capstone\u2019s agent, validation, and preview services.',
       tools: 'Docker · Health Checks'
+    },
+    {
+      level: 'shipped',
+      title: 'GitHub Actions CI and Pages deploys',
+      description:
+        'Run separate server and mobile CI pipelines for Budget Buddy, and deploy this site to GitHub Pages from a GitHub Actions workflow on every push to main.',
+      tools: 'GitHub Actions · pytest · GitHub Pages'
+    },
+    {
+      level: 'shipped',
+      title: 'Containerized data pipeline',
+      description:
+        'Packaged the NER Tenets ETL pipeline with Docker Compose so the same code runs against a local PostgreSQL sandbox or Snowflake.',
+      tools: 'Docker Compose · PostgreSQL · Snowflake'
     },
     {
       level: 'in-progress',

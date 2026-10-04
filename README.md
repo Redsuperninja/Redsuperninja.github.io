@@ -7,10 +7,13 @@ Live at **[redsuperninja.github.io](https://redsuperninja.github.io)**.
 
 ## Sections
 
-- **Experience** — current role at LASP (CU Boulder)
+- **Experience** — LASP software developer internship and Senior RA role (CU Boulder)
 - **Skills** — languages, CI/CD & DevOps tooling, web frameworks, AI/cloud
-- **Projects** — featured builds (Festo agentic frontend generator, SpotU,
-  game projects) plus a compact grid of additional coursework/ML projects
+- **Projects** — featured builds (Budget Buddy, NER Tenets ETL pipeline,
+  Stolen Palor, Festo agentic frontend generator, SpotU) plus a compact grid
+  of additional projects
+- **Resume** — one-page PDF at `public/Tawhid_Ather_Resume.pdf`, linked from
+  the nav, hero, and contact sections
 - **DevOps & Infrastructure** — what's shipped, in progress, and next
 - **Demos** — embedded video walkthroughs (no source code, results only)
 - **Contact** — email, LinkedIn, GitHub

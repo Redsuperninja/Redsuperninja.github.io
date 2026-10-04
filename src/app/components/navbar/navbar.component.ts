@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { PortfolioDataService } from '../../services/portfolio-data.service';
 
 @Component({
   selector: 'app-navbar',
@@ -6,4 +7,6 @@ import { Component } from '@angular/core';
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss'
 })
-export class NavbarComponent {}
+export class NavbarComponent {
+  constructor(public data: PortfolioDataService) {}
+}

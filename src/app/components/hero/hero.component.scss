@@ -42,6 +42,15 @@ h1 {
   color: var(--muted);
   background: var(--panel);
 }
+.resume {
+  display: inline-block;
+  margin-top: 22px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--amber);
+  text-decoration: none;
+  &:hover { text-decoration: underline; }
+}
 .grid {
   display: grid;
   grid-template-columns: 1.1fr 1fr;
