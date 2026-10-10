@@ -60,7 +60,7 @@ export class PortfolioDataService {
     email: 'tawhid.ather@gmail.com',
     linkedin: 'https://linkedin.com/in/tawhid-ather',
     github: 'https://github.com/Redsuperninja',
-    location: 'Boulder, CO',
+    location: 'Highlands Ranch, CO',
     resumeUrl: 'Tawhid_Ather_Resume.pdf'
   };
 
@@ -71,12 +71,10 @@ export class PortfolioDataService {
       location: 'Boulder, CO',
       dates: 'May 2025 — May 2026',
       bullets: [
-        'Built Python/Flask middleware supporting CI/CD pipelines for mission-critical infrastructure used by 50+ scientists and engineers daily.',
-        'Built a full-stack URL shortening service in Angular and TypeScript so researchers can manage links to data, papers, and resources.',
-        'Used Ansible and Python automation for configuration management and automated deployment of an SMTP notification system and the URL shortener across Linux production environments.',
-        'Wrote CLI automation tools (Python/Bash) and a custom log parser to streamline deployments, configuration, and error detection across production systems.',
-        'Integrated OAuth 2.0 with role-based access control for multi-tier permissions on sensitive scientific data.',
-        'Worked in Agile sprints — Git/Bitbucket version control, Jira tracking, daily stand-ups, and code reviews.'
+        'Built Python/Flask backend services and middleware supporting CI/CD pipelines for mission-critical infrastructure used daily by 50+ scientists and engineers.',
+        'Automated configuration and deployment of an SMTP notification service and URL shortener across Linux production servers with Ansible and Python.',
+        'Built a full-stack URL shortener in Angular and TypeScript, secured with OAuth 2.0 and role-based access control.',
+        'Wrote Python and Bash CLI tools and a log parser that automated deployments, maintenance and error detection in production.'
       ]
     },
     {
@@ -85,9 +83,7 @@ export class PortfolioDataService {
       location: 'Boulder, CO',
       dates: 'Aug 2023 — May 2026',
       bullets: [
-        'Supervised and mentored a team of 18 Resident Advisors across two residence halls serving 600+ students.',
-        'Handled confidential student records under FERPA, following data privacy and security practices.',
-        'Led staff meetings and training, and coordinated scheduling to ensure 24/7 coverage.'
+        'Supervised and mentored 18 Resident Advisors across two halls serving 600+ students; handled confidential records under FERPA.'
       ]
     }
   ];
@@ -242,7 +238,8 @@ export class PortfolioDataService {
         'Encoded a reachability constraint guaranteeing a walkable corridor from the board edge to a pinned target building.',
         'Built a CLI with configurable time limits, multiple distinct layouts, and colorized terminal rendering.'
       ],
-      tags: ['Python', 'OR-Tools', 'CP-SAT', 'CLI']
+      tags: ['Python', 'OR-Tools', 'CP-SAT', 'CLI'],
+      links: [{ label: 'View on GitHub', url: 'https://github.com/Redsuperninja/BallXPit-Packing-Solver' }]
     },
     {
       id: 'crm-api',
