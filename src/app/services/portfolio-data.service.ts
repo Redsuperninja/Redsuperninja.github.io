@@ -71,10 +71,14 @@ export class PortfolioDataService {
       location: 'Boulder, CO',
       dates: 'May 2025 — May 2026',
       bullets: [
-        'Built Python/Flask backend services and middleware supporting CI/CD pipelines for mission-critical infrastructure used daily by 50+ scientists and engineers.',
-        'Automated configuration and deployment of an SMTP notification service and URL shortener across Linux production servers with Ansible and Python.',
-        'Built a full-stack URL shortener in Angular and TypeScript, secured with OAuth 2.0 and role-based access control.',
-        'Wrote Python and Bash CLI tools and a log parser that automated deployments, maintenance and error detection in production.'
+        'Built Python/Flask backend services and middleware supporting CI/CD pipelines for infrastructure used daily by 50+ researchers.',
+        'Built a full-stack Angular/TypeScript URL shortener letting scientists and engineers manage links to research data and papers.',
+        'Automated configuration and deployment of the web app and an SMTP notification service on Linux production servers with Ansible.',
+        'Built an automated email service that monitors user login activity and warns users who pass a set inactivity timeframe.',
+        'Wrote Python and Bash CLI tools and a custom log parser that automated deployments, maintenance, error detection and status reporting.',
+        'Provisioned Ubuntu/Debian servers and resolved production issues through root-cause analysis with science and engineering teams.',
+        'Secured applications with OAuth 2.0 and role-based access control; tested and documented REST APIs with Postman.',
+        'Worked in an Agile team using Git/Bitbucket and Jira, with daily stand-ups, sprint planning and code reviews.'
       ]
     },
     {
@@ -83,7 +87,9 @@ export class PortfolioDataService {
       location: 'Boulder, CO',
       dates: 'Aug 2023 — May 2026',
       bullets: [
-        'Supervised and mentored 18 Resident Advisors across two halls serving 600+ students; handled confidential records under FERPA.'
+        'Supervised and mentored 18 Resident Advisors across two halls serving 600+ students; led staff meetings, trainings and scheduling.',
+        'Handled confidential student records under FERPA, applying data privacy practices to sensitive personal information.',
+        'Mediated resident conflicts and gave crisis support, communicating clearly with students, staff and administrators.'
       ]
     }
   ];
